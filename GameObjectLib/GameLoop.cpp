@@ -2,11 +2,13 @@
 #include <iostream>
 
 
-GameLoop::GameLoop() {
+GameLoop::GameLoop() 
+{
 
 }
 
-GameLoop::~GameLoop() {
+GameLoop::~GameLoop() 
+{
 
 }
 

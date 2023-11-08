@@ -19,6 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Map.hpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Node.hpp" />
     <ClCompile Include="Window.cpp" />
     <ClInclude Include="GameLoop.hpp" />
     <ClInclude Include="include\Components\ShapeRenderer.h" />

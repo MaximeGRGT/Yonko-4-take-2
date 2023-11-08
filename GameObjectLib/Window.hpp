@@ -5,7 +5,7 @@
 
 class Window_s {
 public:
-    Window_s(unsigned int width = 1600, unsigned int height = 1000, const std::string& title = "SFML Window");
+    Window_s(unsigned int width = 1920, unsigned int height = 1080, const std::string& title = "Tower Defense");
 
     void addToRenderLayer(int layer, const sf::Drawable& drawable);
     void removeFromRenderLayer(int layer, const sf::Drawable& drawable);
