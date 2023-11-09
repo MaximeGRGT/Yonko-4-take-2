@@ -20,20 +20,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Map.hpp" />
+    <ClCompile Include="MoveMouse.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Node.hpp" />
     <ClCompile Include="Path.cpp" />
+    <ClCompile Include="src\Base.cpp" />
+    <ClCompile Include="src\Enemies.cpp" />
+    <ClCompile Include="src\Ressources.cpp" />
     <ClCompile Include="Wall.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClInclude Include="GameLoop.hpp" />
+    <ClInclude Include="include\Base.h" />
     <ClInclude Include="include\Components\ShapeRenderer.h" />
     <ClInclude Include="include\Components\SquareCollider.h" />
     <ClInclude Include="include\Components\Component.h" />
+    <ClInclude Include="include\Enemies.h" />
     <ClInclude Include="include\GameObject.h" />
+    <ClInclude Include="include\Ressources.h" />
     <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\Maths\Vector2.h" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="src\Components\ShapeRenderer.cpp" />
+    <ClInclude Include="MoveMouse.h" />
     <ClInclude Include="Path.hpp" />
     <ClInclude Include="Wall.hpp" />
     <ClInclude Include="Window.hpp" />
