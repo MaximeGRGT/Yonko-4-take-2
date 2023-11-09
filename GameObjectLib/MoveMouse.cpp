@@ -1,8 +1,9 @@
 #include "MoveMouse.h"
 #include <iostream>
 #include "GameObject.h"
+#include "Scene.h"
 
-GameObject game;
+MouseState mouseState;
 
 void SetMouse::MousePos(sf::Event& event) {
 	switch (event.type) {
@@ -12,12 +13,14 @@ void SetMouse::MousePos(sf::Event& event) {
 
 		switch (event.key.code) {
 		case sf::Mouse::Right:
-			std::cout << "Boutton droit presse" << std::endl;
+			std::cout << "Bouton droit presse" << std::endl;
+			mouseState.isRightButtonPressed = true;
 
 			break;
 
 		case sf::Mouse::Left:
-			std::cout << "Boutton gauche presse" << std::endl;
+			std::cout << "Bouton gauche presse" << std::endl;
+			mouseState.isLeftButtonPressed = true;
 
 			break;
 		}
@@ -29,20 +32,21 @@ void SetMouse::MousePos(sf::Event& event) {
 
 		switch (event.key.code) {
 		case sf::Mouse::Right:
-			std::cout << "Boutton droit relache" << std::endl;
+			std::cout << "Bouton droit relache" << std::endl;
+			mouseState.isRightButtonPressed = false;
 
 			break;
 
 		case sf::Mouse::Left:
-			std::cout << "Boutton gauche relache" << std::endl;
+			std::cout << "Bouton gauche relache" << std::endl;
+			mouseState.isLeftButtonPressed = false;
 		}
 
 		break;
 
 	case sf::Event::MouseMoved:
-		std::cout << "x: " << event.mouseButton.x << std::endl;
-		std::cout << "y: " << event.mouseButton.y << std::endl;
-		
+		mouseState.mouseX = event.mouseMove.x;
+		mouseState.mouseY = event.mouseMove.y;
 
 		break;
 	}

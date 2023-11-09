@@ -16,6 +16,8 @@ public:
 
 	GameObject* CreateDummyGameObject(const std::string& name, float position, const sf::Color color);
 
+	std::vector<GameObject*> CreateAllGameObjects();
+
 private:
 	std::vector<GameObject*> gameObjects;
 };

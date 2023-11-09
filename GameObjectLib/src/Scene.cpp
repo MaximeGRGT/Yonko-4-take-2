@@ -43,3 +43,9 @@ GameObject* Scene::CreateDummyGameObject(const std::string& name, float position
 
 	return gameObject;
 }
+
+std::vector<GameObject*> Scene::CreateAllGameObjects(){
+	std::vector<GameObject*> importantGameobjects;
+	GameObject* player = CreateDummyGameObject("Player", 200.f, sf::Color::Red);
+	return importantGameobjects;
+}

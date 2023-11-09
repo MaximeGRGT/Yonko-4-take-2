@@ -2,6 +2,10 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
 #include "Window.hpp"
+#include "Scene.h"
+#include "PhysicsManager.h"
+#include "MoveMouse.h"
+#include "GameObject.h"
 
 class GameLoop {
 public:
@@ -14,6 +18,8 @@ public:
     void render();
 private:
     Window_s _window;
-
-
+    Scene scene;
+    std::vector<GameObject*> importantGameObjects;
+    PhysicsManager physicsManager;
+    SetMouse mouse;
 };
