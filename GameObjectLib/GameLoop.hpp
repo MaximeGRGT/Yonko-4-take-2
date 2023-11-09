@@ -8,7 +8,7 @@
 #include "GameObject.h"
 
 class GameLoop {
-public:
+public: 
     GameLoop();
     ~GameLoop();
     void run();
