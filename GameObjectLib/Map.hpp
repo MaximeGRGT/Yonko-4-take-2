@@ -4,6 +4,8 @@
 #include "Window.hpp"
 #include "sstream"
 #include "fstream"
+#include "Wall.hpp"
+#include "Path.hpp"
 
 
 

@@ -22,6 +22,8 @@
     <ClCompile Include="Map.hpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Node.hpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="Wall.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClInclude Include="GameLoop.hpp" />
     <ClInclude Include="include\Components\ShapeRenderer.h" />
@@ -32,6 +34,8 @@
     <ClInclude Include="include\Maths\Vector2.h" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="src\Components\ShapeRenderer.cpp" />
+    <ClInclude Include="Path.hpp" />
+    <ClInclude Include="Wall.hpp" />
     <ClInclude Include="Window.hpp" />
   </ItemGroup>
   <ItemGroup>
