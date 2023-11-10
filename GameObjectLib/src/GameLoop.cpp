@@ -108,15 +108,12 @@ void GameLoop::processEvents(float deltaTime) {
 
             switch (event.key.code) {
             case sf::Keyboard::A:
-                // Créer et activer une nouvelle tourelle de type 1
                 towers.push_back(std::make_unique<Tower1>(worldPos, "asset/tour1.png"));
                 break;
             case sf::Keyboard::Z:
-                // Créer et activer une nouvelle tourelle de type 2
                 towers.push_back(std::make_unique<Tower2>(worldPos, "asset/tour2.png"));
                 break;
             case sf::Keyboard::E:
-                // Créer et activer une nouvelle tourelle de type 3
                 towers.push_back(std::make_unique<Tower3>(worldPos, "asset/tour3.png"));
                 break;
             }
