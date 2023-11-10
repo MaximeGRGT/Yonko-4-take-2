@@ -1,56 +1,65 @@
 #pragma once
-#include <GameObject.h>
-#include <Ressources.h>
-#include <Base.h>
-#include <iostream>
+#include "GameObject.hpp"
+#include "Ressources.h"
+#include "Window.hpp"
+#include <SFML/Graphics.hpp>
+#include <vector>
 
-class Enemy : public GameObject
-{
+class Enemy : public GameObject {
 private:
-	int eHealth;
-	int eWood;
-	int eSize;
-	int eSpeed;
-	int eDamage;
+    int eWood;
+    float eSize;
+    int eSpeed;
+    int eDamage;
+
+    sf::Vector2f currentTarget;
+    std::vector<sf::Vector2f> pathPoints;
+    size_t currentPathIndex;
+
+    bool isActive;
+    float startTimer;
+
+    sf::Texture eTexture;
+    sf::Sprite eSprite;
 
 public:
-	Enemy(int health, int wood, int size, int speed, int damage)
-		: eHealth(health), eWood(wood), eSize(size), eSpeed(speed), eDamage(damage) {}
+    Enemy(const std::string& texturePath, int wood, float size, int speed, int damage);
+    virtual ~Enemy();
 
-	~Enemy() {};
-
-	void dropWood(Ressources& ressources);
-	void setWood(int wood) { eWood = wood; };
-	void takeDamage(int damage) { 
-		eHealth -= damage;  
-	};
-	void move();
-	void attackBase(Base& target);
-
-	int getHealth() { return eHealth; };
-	void setHealth(int health) { eHealth = health; };
-
-	int getSize() { return eSize; };
-	void setSize(int size) { eSize = size; };
-
-	int getSpeed() { return eSpeed; };
-	void setSpeed(int speed) { eSpeed = speed; };
+    void initializeStartTimer(float minDelay, float maxDelay);
+    void updateActivation(float deltaTime);
+    void dropWood(Ressources& ressources);
+    void setWood(int wood);
+    void draw(Window_s& window);
+    void setPath(const std::vector<sf::Vector2f>& path);
+    void move(float deltaTime);
+    sf::Vector2f getSize() const;
+    void setSize(float size);
+    void takeDamage(int damage);
+    bool isAlive() const;
+    void update(float deltaTime);
+    const sf::Sprite& getSprite() const;
+    bool getIsActive() const;
+    int getSpeed();
+    void setSpeed(int speed);
 };
 
-class Boss : public Enemy
-{
+class Boss : public Enemy {
 public:
-	Boss() : Enemy(100, 50, 20, 5, 10) {}
+    Boss(const std::string& texturePath);
 };
 
-class Canard : public Enemy
-{
+class Enemy1 : public Enemy {
 public:
-	Canard() : Enemy(20, 10, 5, 10, 2) {}
+    Enemy1(const std::string& texturePath);
 };
 
-class Zombie : public Enemy
-{
+class Enemy2 : public Enemy {
 public:
-	Zombie() : Enemy(50, 5, 15, 2, 5) {}
+    Enemy2(const std::string& texturePath);
+};
+
+class Enemy3 : public Enemy {
+public:
+    Enemy3(const std::string& texturePath);
 };

@@ -1,7 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "Window.hpp"
-#include "GameObject.h"
+#include "GameObject.hpp"
 
 class Path : public GameObject {
 public:

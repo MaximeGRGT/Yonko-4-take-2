@@ -1,7 +1,7 @@
 #include "Window.hpp"
 
 Window_s::Window_s(unsigned int width, unsigned int height, const std::string& title)
-    : window(sf::VideoMode(width, height), title) {
+    : window(sf::VideoMode(width, height), title, sf::Style::Fullscreen) {
     window.setFramerateLimit(60);
 }
 
@@ -43,4 +43,8 @@ void Window_s::renderLayers()
             window.draw(*drawable);
         }
     }
+}
+
+sf::RenderWindow& Window_s::getWindow() {
+    return window;
 }

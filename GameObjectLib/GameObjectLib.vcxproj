@@ -19,42 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Map.hpp" />
-    <ClCompile Include="MoveMouse.cpp" />
-    <ClCompile Include="Node.cpp" />
-    <ClCompile Include="Node.hpp" />
-    <ClCompile Include="Path.cpp" />
-    <ClCompile Include="src\Base.cpp" />
+    <ClCompile Include="include\GameObject.hpp" />
     <ClCompile Include="src\Enemies.cpp" />
+    <ClCompile Include="src\Map.cpp" />
     <ClCompile Include="src\Ressources.cpp" />
-    <ClCompile Include="Wall.cpp" />
-    <ClCompile Include="Window.cpp" />
-    <ClInclude Include="GameLoop.hpp" />
-    <ClInclude Include="include\Base.h" />
-    <ClInclude Include="include\Components\ShapeRenderer.h" />
-    <ClInclude Include="include\Components\SquareCollider.h" />
-    <ClInclude Include="include\Components\Component.h" />
+    <ClCompile Include="src\Window.cpp" />
+    <ClCompile Include="include\Tower.hpp" />
     <ClInclude Include="include\Enemies.h" />
-    <ClInclude Include="include\GameObject.h" />
+    <ClInclude Include="include\GameLoop.hpp" />
+    <ClCompile Include="src\GameLoop.cpp" />
+    <ClInclude Include="include\Map.hpp" />
     <ClInclude Include="include\Ressources.h" />
-    <ClInclude Include="include\Scene.h" />
-    <ClInclude Include="include\Maths\Vector2.h" />
-    <ClCompile Include="GameLoop.cpp" />
-    <ClCompile Include="src\Components\ShapeRenderer.cpp" />
-    <ClInclude Include="MoveMouse.h" />
-    <ClInclude Include="Path.hpp" />
-    <ClInclude Include="Wall.hpp" />
-    <ClInclude Include="Window.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\Scene.cpp" />
-    <ClCompile Include="src\Components\Component.cpp" />
-    <ClCompile Include="src\Components\SquareCollider.cpp" />
-    <ClCompile Include="src\GameObject.cpp" />
-    <ClCompile Include="src\Maths\Vector2.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="include\Maths\Vector2.inl" />
+    <ClInclude Include="include\Window.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
